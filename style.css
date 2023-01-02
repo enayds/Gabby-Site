@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,300&display=swap');
+
+
+html {
+    scroll-padding-top: 70px; /* height of sticky header */
+  }
+
+  
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+    text-transform: uppercase;
+}
+
+section {
+    background: white;
+    width: 100%; 
+    padding: 10px;
+}
+/* styling for the navigation panel */
+#navigation-panel{
+    color: black;
+    width: 100%;
+    position: fixed; 
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 777;
+}
+
+.nav-col {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 10px;
+    background-color: white;
+}
+
+.logo-image {
+    width: 30%;
+    cursor: pointer;
+}
+
+.nav-links {
+    width: 50%;
+    margin: auto;
+    padding: 5px;
+}
+
+.link-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link-item {
+    list-style: none;
+    font-size: 20px;
+    position: relative;
+}
+
+.link-item a {
+    transition: .5s;
+}
+
+.link-item:hover a {
+    color: grey;
+}
+
+.contact-btn {
+    border: 1px solid black;
+    padding: 5px 20px;
+    border-radius: 2px;
+    
+}
+
+.contact-btn:hover {
+    color: grey;
+}
+
+.underline {
+    width: 70%;
+    height: 5%;
+    background: black;
+    position: absolute;
+    top: -20px;
+    left: -50px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.link-item:hover .underline{
+    opacity: 1 !important;
+    left: 0;
+}
+
+.transparent-btn {
+    color: black;
+    background: transparent;
+    border: 1px black solid;
+    font-size: 25px;
+}
+
+/* hero styling for first section */
+
+#hero-section {
+    padding-top: 130px;
+}
+
+.hero-container {
+    margin-top: 10px;
+    display: flex;
+    width: 92%;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.hero-writeup {
+    flex-basis: 45%;
+    width: 100%;
+    margin-left: 25px;
+}
+
+.hero-writeup h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.hero-writeup p {
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.conc-btn {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.hero-image-container {
+    flex-basis: 60%;
+    margin-left: 5px;
+}
+
+.hero-image-container img {
+    width: 110%;
+    height: 110%;
+}
+
+
+/* about me section styling */
+
+.flex-container {
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-div {
+    width: 100%;
+    flex-basis: 45%;
+}
+
+.left-div img {
+    width: 100%;
+}
+
+.right-div {
+    width: 100%;
+    flex-basis: 50%;
+}
+
+.about-heading {
+    text-align:center;
+    font-size: 40px;
+    position: relative;
+    font-weight: 100;
+}
+
+.underline-text {
+    width: 15%;
+    height: 2px;
+    position: absolute;
+    background: black;
+    bottom: -5px;
+    left: 37%;
+}
+
+.right-div p {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+    
+    margin-top: 15px;
+}
+
+.right-float-btn {
+    float: right;
+}
+
+
+/* my projects section styling */
+.reversed-container {
+    flex-direction: row-reverse;
+}
+
+
+.left-float-btn {
+    float: left;
+}
+
+.span-div{
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.page-break-underline {
+    width: 30%;
+    height: 2px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#bottom-panel {
+    background: black;
+}
+
+.bottom-nav-col {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 10px;
+    background-color: black;
+    color: white;
+}
+
+.designer-info {
+    display: block;
+    flex-basis: 50%;
+    align-items: center;
+}
+.designer-info p {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+
+
+.bottom-nav-col a {
+    color: white;
+}
