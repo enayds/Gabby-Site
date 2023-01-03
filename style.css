@@ -110,7 +110,7 @@ section {
 /* styling the sidebar for smaller screens */
 
 .side-bar {
-    width: 40%;
+    width: 60%;
     height: 100vh;
     background: black;
     position: fixed;
@@ -128,7 +128,7 @@ section {
 }
 
 .side-bar-item {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .side-bar-item a {
@@ -183,6 +183,8 @@ section {
     }
 }
 
+
+
 @media screen and (max-width:950px) {
     .logo-image{
     width: 50%;
@@ -204,6 +206,10 @@ section {
 
     .nav-links {
         display: none;
+    }
+
+    .logo-image {
+        width: 30%;
     }
 }
 
@@ -259,11 +265,25 @@ section {
 @media screen and (max-width:1000px){
     .hero-container {
         flex-direction: column;
+        box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        margin: auto;
+    }
+
+    .hero-writeup h1{
+        font-size: 30px;
+        text-align: center;
     }
 
     .reverse-con {
         flex-direction: column-reverse;
     }
+
+    .hero-image-container img {
+        width: 100%;
+        height: 100%;
+    }
+
 }
 
 
@@ -347,7 +367,21 @@ section {
         flex-direction: column;
     }
 
+    .about-heading {
+        font-size: 30px;
+    }
+
+    .transparent-btn{
+        float: right;
+        font-size: 20px;
+    }
+
+    .white-border {
+        width:fit-content;
+    }
 }
+
+
 
 #bottom-panel {
     background: black;
@@ -381,4 +415,28 @@ section {
 .white-border {
     border: 1px solid white;
 
+}
+
+/* media screen styling for footer  */
+
+@media screen and (max-width:940px) {
+    .footer-nav {
+        display: block;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: end;
+        
+    }
+
+    .footer-links .link-item {
+        padding-top: 7px;
+    }
+
+    .bottom-nav-col {
+        width: 92%;
+        margin: auto;
+        text-align: left;
+    }
 }
