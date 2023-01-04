@@ -28,3 +28,7 @@ function openMenu(){
 function closeMenu(){
   document.querySelector('.side-bar').classList.remove('opened')
 }
+
+topBtn = document.querySelector('.top-btn').addEventListener('click', () => { 
+  document.documentElement.scrollTop = 0;
+})
