@@ -1,42 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,300&display=swap');
+ 
+ * { 
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Montserrat', sans-serif;
 
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-
-a {
+ }
+ a {
     text-decoration: none;
-    color:black;
-    text-transform: uppercase;
+    color:black
 }
-
 
 section {
     background: white;
     width: 100%; 
     padding: 10px;
 }
-/* styling for the navigation panel */
+/* ------------------------------navigation style begins-------------------- */
+
 #navigation-panel{
-    color: black;
-    width: 100%;
     position: fixed; 
     box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
     z-index: 777;
     transition: .5s;
+    height: 124.03px;
+    background: white;
+    width: 100%;
 }
-
 
 .nav-col {
     display: flex;
     justify-content: space-between;
     margin: auto;
     padding: 0 10px;
-    background-color: white;
 }
 
 .logo-image {
@@ -58,8 +57,13 @@ section {
 
 .link-item {
     list-style: none;
-    font-size: 20px;
     position: relative;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.2em;
 }
 
 .link-item a {
@@ -70,61 +74,44 @@ section {
     color: grey;
 }
 
-.contact-btn {
-    border: 1px solid black;
-    padding: 5px 20px;
-    border-radius: 2px;
-    
-}
-
-.contact-btn:hover {
-    color: grey;
-}
-
-.black-underline {
-    background: black;
-    top: -20px;
-    width: 70%;
-}
-
 .underline {
-    height: 5%;
+    border: 1px solid black;
     position: absolute;
-    left: -50px;
+    left: -100px;
+    top: -90%;
+    width: 167.71px;
     opacity: 0;
-    transition: .5s;
+    transition: .7s;
+    background: black;
+    height: 0;
 }
 
-.link-item:hover .underline{
-    opacity: 1 !important;
-    left: 0;
+.link-item:hover .underline {
+    opacity: 1;
+    left: -40px;
 }
 
-.transparent-btn {
-    color: black;
-    background: transparent;
-    border: 1px black solid;
-    font-size: 25px;
-}
 
+/* ----------------side bar navigation styling-------------- */
 /* styling the sidebar for smaller screens */
 
 .side-bar {
-    width: 60%;
-    height: 100vh;
+    width: 100%;
     background: black;
     position: fixed;
     z-index: 7777;
-    right: -1000px;
-    top: 0;
+    left: 0;
+    top: -1000px;
     padding: 15px 0 0 35px;
     transition: .6s;
-    display: none;
+    padding-bottom: 40px;
+
+    
 
 }
 
 .side-bar.opened {
-    right: 0;
+    top: 0;
 }
 
 .side-bar-item {
@@ -135,11 +122,27 @@ section {
     color: white;
 }
 
+
 .white-underline {
+    
+    border: 1px solid white;
     background: white;
-    bottom: -10px;
+    width: 167.71px;
+    left: 10px;
+    top: -90%;
+    height: 0;
+}
+
+.home-white-underline {
     width: 10%;
 }
+
+.link-item:hover .white-underline {
+    opacity: 1;
+    left: -10px;
+}
+
+
 
 .side-bar-btn{
     background: black;
@@ -149,7 +152,7 @@ section {
     padding: 10px;
     height: 50px;
     z-index: 999;
-    display: none ;
+    display: none;
 }
 
 
@@ -161,72 +164,77 @@ section {
     transition: .5s;
 }
 
-
-
 .menu-btn {
     width: 100%;
     cursor: pointer;
 }
 
 
+/* ----------------media styling for smaller screens for sidebar nav ------------------------ */
 /* media screen for navigation bar <= 1200px */
 @media screen and (max-width:1200px) {
-        .link-item {
-        font-size: 18px;
-    }
-    .nav-links {
-        width: 70%;
-    }
+    .link-item {
+    font-size: 18px;
+}
+.nav-links {
+    width: 70%;
+}
 
-    .logo-image{
-        width: 40%;
-    }
+.logo-image{
+    width: 40%;
+}
 }
 
 
 
 @media screen and (max-width:950px) {
-    .logo-image{
-    width: 50%;
+.logo-image{
+width: 50%;
 }
 .nav-links {
-    width: 90%;;
+width: 90%;;
 }
 
 }
 
 @media screen and (max-width:940px) {
-    .side-bar-btn {
-        display: block ;
-    }
-
-    .side-bar {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .logo-image {
-        width: 30%;
-    }
+.side-bar-btn {
+    display: block ;
 }
 
+.side-bar {
+    display: block;
+}
 
-/* hero styling for first section */
+.nav-links {
+    display: none;
+}
 
-#hero-section {
+.logo-image {
+    width: 30%;
+}
+
+.close-btn {
+    align-items: right;
+
+}
+}
+/* ------------------------------navigation style ends-------------------- */
+
+/* ------------------------------hero1 style begins-------------------- */
+
+#hero1 {
     padding-top: 130px;
 }
 
 .hero-container {
+    margin: auto;
     margin-top: 10px;
     display: flex;
-    width: 92%;
+    width: 100%;
     align-items: center;
     padding: 5px;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .hero-writeup {
@@ -236,32 +244,67 @@ section {
 }
 
 .hero-writeup h1 {
-    font-size: 45px;
-    font-weight: 700;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 78px;
     margin: 5px 0;
 }
 
 .hero-writeup p {
-    font-size: 20px;
-    line-height: 35px;
+    margin-top: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    width: 464.97px;
+    height: 116px;
 }
 
-.conc-btn {
-    margin-top: 25px;
-    display: inline-block;
+.contact-btn {
+    border: 1px solid black;
+    padding: 15px 10px;
+    border-radius: 2px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: inline-block; 
+    margin:auto;
+    margin-top: 80px;
+    text-align: center;
+    width: 30%;
 }
 
 .hero-image-container {
-    flex-basis: 60%;
+    margin-top: 20px;
+    flex-basis: 45%;
     margin-left: 5px;
+    width: 100%;
 }
 
-.hero-image-container img {
-    width: 110%;
-    height: 110%;
+.hero-image {
+    width: 800.02px; 
+    height: 673.02px;
+    /* width: 100%; */
 }
 
-/* media screen styling for smaller screens  */
+.pagebreak-div {
+    margin: 50px 60px 0;
+    width: 92%;
+    text-align: center;
+}
+
+.pagebreak-line {
+    display: inline-block;
+    width: 679.62px;
+    height: 0px;
+    background: black;
+    border: 1px solid #000000;
+}
+/* ----------------media styling for smaller screens for hero1 ------------------------ */
+
+
 @media screen and (max-width:1000px){
     .hero-container {
         flex-direction: column;
@@ -270,10 +313,27 @@ section {
         margin: auto;
     }
 
+    .hero-writeup {
+        margin-right: 15px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .left-float-btn {
+        float: right;
+    }
+
     .hero-writeup h1{
-        font-size: 30px;
+        font-size: 45px;
         text-align: center;
     }
+
+    .hero-writeup p {
+        width: 92%;
+    }
+
 
     .reverse-con {
         flex-direction: column-reverse;
@@ -284,15 +344,26 @@ section {
         height: 100%;
     }
 
+    .pagebreak-div {
+        margin: 50px auto 0 auto;
+    }
+
+    .pagebreak-line {
+        width: 400px;
+    }
+
 }
 
+@media screen and (max-width:700px) {
+    .pagebreak-line {
+        width:250px;
+    }
+}
+/* ------------------------------hero1 style ends-------------------- */
 
-/* about me section styling */
-
-.flex-container {
-    margin-top: 3em;
-    display: flex;
-    justify-content: space-between;
+/* ------------------------------hero2 style begins-------------------- */
+#hero2 {
+    margin-top: 100px;
 }
 
 .left-div {
@@ -300,91 +371,109 @@ section {
     flex-basis: 45%;
 }
 
-.left-div img {
-    width: 100%;
-}
-
 .right-div {
     width: 100%;
     flex-basis: 50%;
+    align-items: center;
 }
 
+.heading-div {
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+}
 .about-heading {
-    text-align:center;
-    font-size: 40px;
-    position: relative;
-    font-weight: 100;
-    width: 50%;
-    margin: auto;
-    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .underline-text {
-    width: 15%;
-    height: 2px;
-    position: absolute;
-    background: black;
-    bottom: -5px;
-    left: 37%;
+    display: inline-block;
+    width: 121.19px;
+    border: 1px solid #000000;
+    position: relative;
+    left: -30px;
 }
 
-.right-div p {
-    font-size: 20px;
-    line-height: 30px;
-    text-align: justify;
-    
-    margin-top: 15px;
+.writeup-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    font-style: normal;
+    width: 88%;
+    margin-left: 10px;
 }
 
 .right-float-btn {
     float: right;
 }
 
+/* ----------------media styling for smaller screens for hero2 ------------------------ */
 
-/* my projects section styling */
-.reversed-container {
-    flex-direction: row-reverse;
-}
+@media screen and (max-width:1300px) {
 
-
-.left-float-btn {
-    float: left;
-}
-
-.span-div{
-    margin-top: 30px;
-    width: 100%;
-    text-align: center;
-}
-
-.page-break-underline {
-    width: 30%;
-    height: 2px;
-    border: 1px solid black;
-    display: inline-block;
-}
-
-/* media screen for smaller screens */ 
-@media screen and (max-width:1000px){    
-    .reversed-container {
-        flex-direction: column;
+    .hero-writeup h1 {
+        font-size: 45px;
+    }
+    .left-div {
+        flex-basis: 50%;
     }
 
-    .about-heading {
-        font-size: 30px;
+    .right-div {
+        flex-basis: 45%;
     }
 
-    .transparent-btn{
-        float: right;
+    .writeup-text {
         font-size: 20px;
+        line-height: 25px;
     }
 
-    .white-border {
-        width:fit-content;
+}
+@media screen and (max-width:1000px) {
+    .about-heading {
+        font-size: 45px;
+        margin: 20px auto 0 auto;
+    }
+
+    .underline-text {
+        left: -64px;
+    }
+
+    .writeup-text {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: justify;
+        width: 95%;
+    }
+
+    
+}
+/* ------------------------------hero2 style ends-------------------- */
+
+/* ------------------------------hero3 style starts-------------------- */
+
+#hero3 {
+    margin-top: 100px;
+}
+
+.about-underline {
+    left: -13px;
+}
+
+@media screen and (max-width:1000px) {
+    .about-underline {
+        left: -43px;
     }
 }
 
+/* ------------------------------hero3 style ends-------------------- */
 
+/* ------------------------------footer style starts-------------------- */
 
 #bottom-panel {
     background: black;
@@ -420,36 +509,9 @@ section {
 
 }
 
-/* media screen styling for footer  */
+/* ------------------------------footer style ends-------------------- */
 
-@media screen and (max-width:1000px) {
-    .footer-nav {
-        display: block;
-    }
-
-    .bottom-nav-col {
-        padding: 10px 8px;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        align-items: end;
-        
-    }
-
-    .footer-links .link-item {
-        padding-top: 7px;
-        font-size: 15px;
-    }
-
-    .bottom-nav-col {
-        width: 92%;
-        margin: auto;
-        text-align: left;
-    }
-}
-
-/* projects section styling  */
+/* ------------------------------project page style starts-------------------- */
 
 .projects-container {
     padding-top: 150px;
@@ -488,15 +550,25 @@ section {
     text-align: center;
     box-shadow: 0 5px 0px 0px grey;
     padding: 7px 0;
-    transition: .7s;
+    transition: .7s;font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    margin-top: 20px;
 }
 
 .view-btn:hover {
     transform: translateY(-5px);
 }
 
+.transparent-btn {
+    color: black;
+    background: transparent;
+    border: 1px black solid;
+    font-size: 25px;
+}
+
 .next-btn {
-    width: 20%;
+    width: 15%;
     display: inline-block;
     text-align: center;
     padding: 7px 0;
@@ -526,8 +598,14 @@ section {
 
 
 /* styles for smaller screens for Projects page */
+@media screen and (max-width:1400px) {
+    .next-btn{
+        width: 25%;
+    }
+}
 
 @media screen and (max-width:1000px) {
+    
     .projects-row {
         flex-direction: column;
         margin: 0 auto;
@@ -542,11 +620,25 @@ section {
     }
 
     .left-dets {
-        padding:80px 0
+        padding:50px  0;
     }
+
+    .projects-info {
+        box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+    }
+
 }
 
-/* project details page styling  */
+@media screen and (max-width: 900px) {
+    .next-btn {
+        width: 30%;
+        font-size: 20px;
+    }
+}
 
 .project-details {
     padding-top: 150px;
@@ -558,11 +650,12 @@ section {
 .left-heading {
     text-align: left;
     margin-left: 0;
-    margin-bottom: 40px;
+    margin-bottom: 5px;
 }
 
 .underline-det {
-    left: 0;
+    float:left;
+    left: 1px;
 }
 
 .project-writeup {
@@ -576,7 +669,7 @@ section {
 
 .previous-btn {
     margin: 20px 0;
-    font-weight: 800;
+    font-weight: 600;
     display: flex;
     align-items: center;
     transition: .5s;
@@ -651,63 +744,31 @@ section {
 }
 
 
-/* styling the about page */
+/* ------------------------------project page style ends-------------------- */
+
+.about-text {
+    margin-top: 20px;
+}
 
 .about-container {
-    padding-top: 150px;
-    width: 92%;
-    margin: auto;
-    margin-bottom: 100px;
+    padding-top: 130px;
 }
 
-.about-info {
+.caret-left {
+    width: 20%;
+}
+
+.previous-btn {
+    margin: 20px 0;
+    font-weight: 800;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
     align-items: center;
+    transition: .5s;
+    border: 1px solid black;
+    width: 252.63px;
+
 }
 
-.about-image {
-    flex-basis: 55%;
-    margin: auto;
-}
-
-.about-image img {
-    width: 100%;
-}
-
-
-
-.about-description {
-    flex-basis: 40%;
-    width: 100%;
-}
-
-.underline-about {
-    width: 40%;
-    left: 0;
-}
-
-/* styling for smaller media screens */
-
-@media screen and (max-width:1500px) {
-    .about-title {
-        width: 80%;
-    }
-}
-
-@media screen and (max-width:1400px) {
-    .about-text {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width:1100px){
-    .about-info {
-        flex-direction: column;
-    }
-
-    .about-title {
-        margin: 20px 0;
-    }
+.abt-previous-btn {
+    margin-left: 34px;
 }
