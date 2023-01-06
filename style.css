@@ -502,7 +502,7 @@ section {
 /* ------------------------------footer style starts-------------------- */
 
 #bottom-panel {
-    background: white;
+    background: black;
     box-shadow:0px 0px 0px white, 0px -2px 2px white;
 }
 
