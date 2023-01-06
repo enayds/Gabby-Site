@@ -284,9 +284,9 @@ width: 90%;;
 }
 
 .hero-image {
-    width: 800.02px; 
-    height: 673.02px;
-    /* width: 100%; */
+    /* width: 800.02px; 
+    height: 673.02px; */
+    width: 100%;
 }
 
 .pagebreak-div {
@@ -482,14 +482,14 @@ width: 90%;;
 .bottom-nav-col {
     display: flex;
     justify-content: space-between;
-    margin: auto;
     padding: 30px 10px;
     background-color: black;
     color: white;
+    width: 100%;
 }
 
 .designer-info {
-    display: block;
+    display:block;
     flex-basis: 50%;
     align-items: center;
 }
