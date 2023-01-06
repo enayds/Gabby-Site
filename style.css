@@ -7,15 +7,16 @@
      margin: 0;
      box-sizing: border-box;
      font-family: 'Montserrat', sans-serif;
+     color: white;
+     background: black;
 
  }
  a {
     text-decoration: none;
-    color:black
+    color:white
 }
 
 section {
-    background: white;
     width: 100%; 
     padding: 10px;
 }
@@ -23,11 +24,10 @@ section {
 
 #navigation-panel{
     position: fixed; 
-    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 2px rgba(255, 255, 255, 0.932);
     z-index: 777;
     transition: .5s;
     height: 124.03px;
-    background: white;
     width: 100%;
 }
 
@@ -36,11 +36,13 @@ section {
     justify-content: space-between;
     margin: auto;
     padding: 0 10px;
+    align-items: center;
 }
 
 .logo-image {
-    width: 30%;
+    width: 15%;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .nav-links {
@@ -75,14 +77,14 @@ section {
 }
 
 .underline {
-    border: 1px solid black;
+    border: 1px solid white;
     position: absolute;
     left: -100px;
     top: -90%;
     width: 167.71px;
     opacity: 0;
     transition: .7s;
-    background: black;
+    background: white;
     height: 0;
 }
 
@@ -97,7 +99,6 @@ section {
 
 .side-bar {
     width: 100%;
-    background: black;
     position: fixed;
     z-index: 7777;
     left: 0;
@@ -172,28 +173,28 @@ section {
 
 /* ----------------media styling for smaller screens for sidebar nav ------------------------ */
 /* media screen for navigation bar <= 1200px */
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1300px) {
     .link-item {
     font-size: 18px;
 }
 .nav-links {
-    width: 70%;
+    width: 80%;
 }
 
 .logo-image{
-    width: 40%;
+    width: 25%;
 }
 }
 
 
 
-@media screen and (max-width:950px) {
-.logo-image{
-width: 50%;
-}
-.nav-links {
-width: 90%;;
-}
+@media screen and (max-width:1000px) {
+    .logo-image{
+    width: 25%;
+    }
+    .nav-links {
+    width: 90%;;
+    }
 
 }
 
@@ -210,14 +211,39 @@ width: 90%;;
     display: none;
 }
 
-.logo-image {
-    width: 30%;
-}
+
 
 .close-btn {
     align-items: right;
 
 }
+    .logo-image {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width:840px) {
+    .logo-image {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .logo-image {
+        width: 26%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .logo-image {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .logo-image {
+        width: 30%;
+    }
 }
 /* ------------------------------navigation style ends-------------------- */
 
@@ -262,7 +288,7 @@ width: 90%;;
 }
 
 .contact-btn {
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 15px 10px;
     border-radius: 2px;
     font-style: normal;
@@ -299,8 +325,8 @@ width: 90%;;
     display: inline-block;
     width: 679.62px;
     height: 0px;
-    background: black;
-    border: 1px solid #000000;
+    background: white;
+    border: 1px solid white;
 }
 /* ----------------media styling for smaller screens for hero1 ------------------------ */
 
@@ -395,7 +421,7 @@ width: 90%;;
 .underline-text {
     display: inline-block;
     width: 121.19px;
-    border: 1px solid #000000;
+    border: 1px solid white;
     position: relative;
     left: -30px;
 }
@@ -476,7 +502,8 @@ width: 90%;;
 /* ------------------------------footer style starts-------------------- */
 
 #bottom-panel {
-    background: black;
+    background: white;
+    box-shadow:0px 0px 0px white, 0px -2px 2px white;
 }
 
 .bottom-nav-col {
@@ -486,6 +513,7 @@ width: 90%;;
     background-color: black;
     color: white;
     width: 100%;
+    
 }
 
 .designer-info {
@@ -561,9 +589,9 @@ width: 90%;;
 }
 
 .transparent-btn {
-    color: black;
+    color: white;
     background: transparent;
-    border: 1px black solid;
+    border: 1px white solid;
     font-size: 25px;
 }
 
@@ -574,7 +602,8 @@ width: 90%;;
     padding: 7px 0;
     position: relative;
     background: transparent;
-    color: black;
+    border: 1px solid white;
+    color: white;
 }
 
 
@@ -601,6 +630,12 @@ width: 90%;;
 @media screen and (max-width:1400px) {
     .next-btn{
         width: 25%;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .transparent-btn {
+    font-size: 20px;
     }
 }
 
@@ -665,6 +700,7 @@ width: 90%;;
 
 .caret-left {
     width: 20%;
+    
 }
 
 .previous-btn {
@@ -764,7 +800,7 @@ width: 90%;;
     display: flex;
     align-items: center;
     transition: .5s;
-    border: 1px solid black;
+    border: 1px solid white;
     width: 252.63px;
 
 }
