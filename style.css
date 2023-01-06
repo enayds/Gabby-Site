@@ -462,7 +462,7 @@ section {
 }
 @media screen and (max-width:1000px) {
     .about-heading {
-        font-size: 38px;
+        font-size: 35px;
         margin: 20px auto 0 auto;
     }
 
@@ -648,6 +648,7 @@ section {
 
     .view-btn {
         float: none;
+        font-size: 23px;
     }
 
     .page-break-underline {
